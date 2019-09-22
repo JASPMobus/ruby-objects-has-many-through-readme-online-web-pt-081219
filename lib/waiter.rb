@@ -1,5 +1,5 @@
 class Waiter
-  attr_reader :name, :years_of_experience, :meals, :tips
+  attr_reader :name, :years_of_experience, :meals
   
   @@all = []
   
@@ -7,7 +7,6 @@ class Waiter
     @name = name
     @years_of_experience = years_of_experience
     @meals = []
-    @tips = []
     
     @@all << self 
   end
@@ -17,6 +16,6 @@ class Waiter
   end
   
   def new_meal(customer, total, tip)
-    @tips.push(tip)
     @meals.push(new Meal(self, customer, total, tip))
+  end 
 end
