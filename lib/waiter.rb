@@ -1,5 +1,5 @@
 class Waiter
-  attr_reader :name, :years_of_experience, :meals, :best_tip, :best_tipper 
+  attr_reader :name, :years_of_experience, :meals, :best_tip, :best_tipper
   
   @@all = []
   
