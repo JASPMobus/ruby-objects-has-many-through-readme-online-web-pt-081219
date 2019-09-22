@@ -28,4 +28,8 @@ class Waiter
       @best_tipper = customer
     end
   end
+  
+  def meals
+    @meals
+  end
 end
