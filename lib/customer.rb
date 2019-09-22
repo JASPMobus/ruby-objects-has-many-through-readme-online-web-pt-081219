@@ -7,6 +7,7 @@ class Customer
     @name = name
     @age = age
     @meals = []
+    @waiters = []
     
     @@all << self
   end
