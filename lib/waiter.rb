@@ -17,11 +17,14 @@ class Waiter
   end
   
   def new_meal(customer, total, tip)
+    
+    @meals.push(Meal.new(self, customer, total, tip))
+  end 
+  
+  def check_tip(customer, tip)
     if tip > @best_tip 
       @best_tip = tip
       @best_tipper = customer
     end
-    
-    @meals.push(Meal.new(self, customer, total, tip))
-  end 
+  end
 end
