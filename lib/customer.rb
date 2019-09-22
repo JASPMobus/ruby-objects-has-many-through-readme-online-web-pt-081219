@@ -1,5 +1,5 @@
 class Customer
-  attr_reader :name, :age, :meals
+  attr_reader :name, :age, :meals, :waiters
   
   @@all = []
   
@@ -16,6 +16,7 @@ class Customer
   end
   
   def new_meal(waiter, total, tip)
+    @waiters.push(waiter)
     @meals.push(Meal.new(waiter, self, total, tip))
   end
 end
