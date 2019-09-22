@@ -7,6 +7,7 @@ class Waiter
     @name = name
     @years_of_experience = years_of_experience
     @meals = []
+    @best_tip = 0
     
     @@all << self 
   end
