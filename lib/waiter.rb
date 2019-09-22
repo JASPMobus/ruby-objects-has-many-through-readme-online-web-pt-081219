@@ -19,7 +19,7 @@ class Waiter
   def new_meal(customer, total, tip)
     check_tip(customer, tip)
     
-    @meals.unshift(Meal.new(self, customer, total, tip))
+    @meals.learn(Meal.new(self, customer, total, tip))
   end 
   
   def check_tip(customer, tip)
