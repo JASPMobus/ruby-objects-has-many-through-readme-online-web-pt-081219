@@ -18,6 +18,7 @@ class Customer
   
   def new_meal(waiter, total, tip)
     waiter.check_tip(self, tip)
+    
     @waiters.push(waiter)
     @meals.push(Meal.new(waiter, self, total, tip))
   end
